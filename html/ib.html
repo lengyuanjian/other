@@ -1,0 +1,13 @@
+<button id="createButton">创建元素</button>
+<div id="container"></div>
+
+<script>
+var createButton = document.getElementById("createButton");
+var container = document.getElementById("container");
+
+createButton.addEventListener("click", function() {
+  var newElement = document.createElement("p");
+  newElement.textContent = "这是一个新的段落";
+  container.appendChild(newElement);
+});
+</script>
