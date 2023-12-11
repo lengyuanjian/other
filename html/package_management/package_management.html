@@ -8,12 +8,12 @@
         body {
             margin: 0;
             display: grid;
-            grid-template-rows: 5% auto 5%;
+            grid-template-rows: 5% auto 4%;
             height: 100vh; /* 使网格占据整个视口的高度 */
         }
-        .row1 { background-color: rgb(50,50,50);grid-row:1;} 
-        .row3 { background-color: rgb(240,240,255);grid-row:3;} 
-        .row2 { 
+        .header { background-color: rgb(50,50,50);grid-row:1;} 
+        .footer { background-color: rgb(50,50,50);grid-row:3;} 
+        .window { 
             grid-row:2;
             background-color: rgb(245,245,255);
             margin: 0;
@@ -22,18 +22,18 @@
         }
     </style>
     <body>
-        <div class="row1" >
+        <div class="header" >
             
         </div>
-        <div class="row2" >
+        <div class="window" >
             <div style="background-color: rgb(37,37,37)">
             
             </div>
-            <div style="background-color: rgb(30,30,30)">
+            <div style="background-color: rgb(46,46,46)">
             
             </div>
         </div>
-        <div class="row3" >
+        <div class="footer" >
             
         </div> 
     </body>
