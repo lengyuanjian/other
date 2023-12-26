@@ -1,0 +1,22 @@
+{
+    "queue":[
+        {
+            "name":"user1",
+            "level":0,
+            "version":0,
+            "active":"temporary|formal package"
+        },
+        {
+            "name":"user2",
+            "level":0,
+            "version":0,
+            "active":"temporary|formal package"
+        },
+        {
+            "name":"user3",
+            "level":0,
+            "version":0,
+            "active":"temporary|formal package"
+        }
+    ]
+}
