@@ -17,6 +17,7 @@
     add_executable(app main.cpp)
     target_link_libraries(app PRIVATE thread_test)
     # 例子：设置源文件
+    target_sources(MyTarget PRIVATE source1.cpp)
 属性
     target_sources(MyTarget PRIVATE source1.cpp)     # 仅适用于 MyTarget
     target_sources(MyTarget INTERFACE source2.cpp)    # 适用于链接到 MyTarget 的其他目标
@@ -31,3 +32,18 @@
     target_link_options(MyTarget PRIVATE -pthread)     # 仅适用于 MyTarget
     target_link_options(MyTarget INTERFACE -static)    # 适用于链接到 MyTarget 的其他目标
     target_link_options(MyTarget PUBLIC -lmylibrary)    # 同时适用于 MyTarget 和链接到 MyTarget 的其他目标
+
+    # 例子：设置头文件搜索路径
+    target_include_directories(MyTarget PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include1)
+    target_include_directories(MyTarget INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include2)
+    target_include_directories(MyTarget PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include3)
+
+    # 或者，可以使用列表
+    target_include_directories(MyTarget
+        PRIVATE
+            ${CMAKE_CURRENT_SOURCE_DIR}/private_include
+        PUBLIC
+            ${CMAKE_CURRENT_SOURCE_DIR}/public_include
+            ${CMAKE_CURRENT_SOURCE_DIR}/another_public_include
+    )
+
