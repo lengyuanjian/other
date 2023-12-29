@@ -1,1 +1,33 @@
  rm ./* -rf && cmake -DCMAKE_VERBOSE_MAKEFILE=ON ../ && make && ./app
+ 
+ 变量：
+    CMAKE_CXX_COMPILER 编译器 g++
+    CMAKE_CXX_STANDARD C++版本
+    CMAKE_CURRENT_SOURCE_DIR 当前路径
+     根路径
+
+
+ 函数：
+    cmake_minimum_required(VERSION 3.12) 最低依赖版本号
+    project(project_name) 设置工程名字
+    set(k,v) 设置环境变量值
+    set(CMAKE_CXX_COMPILER, g++)
+    set(CMAKE_CXX_STANDARD, 11)
+    set(CMAKE_CXX_STANDARD_REQUIRED NO)
+    add_executable(app main.cpp)
+    target_link_libraries(app PRIVATE thread_test)
+    # 例子：设置源文件
+属性
+    target_sources(MyTarget PRIVATE source1.cpp)     # 仅适用于 MyTarget
+    target_sources(MyTarget INTERFACE source2.cpp)    # 适用于链接到 MyTarget 的其他目标
+    target_sources(MyTarget PUBLIC source3.cpp)       # 同时适用于 MyTarget 和链接到 MyTarget 的其他目标
+
+    # 例子：设置编译选项
+    target_compile_options(MyTarget PRIVATE -Wall)    # 仅适用于 MyTarget
+    target_compile_options(MyTarget INTERFACE -Werror) # 适用于链接到 MyTarget 的其他目标
+    target_compile_options(MyTarget PUBLIC -O2)        # 同时适用于 MyTarget 和链接到 MyTarget 的其他目标
+
+    # 例子：设置链接选项
+    target_link_options(MyTarget PRIVATE -pthread)     # 仅适用于 MyTarget
+    target_link_options(MyTarget INTERFACE -static)    # 适用于链接到 MyTarget 的其他目标
+    target_link_options(MyTarget PUBLIC -lmylibrary)    # 同时适用于 MyTarget 和链接到 MyTarget 的其他目标
