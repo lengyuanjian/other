@@ -1,6 +1,0 @@
-/home/lyj/git/other/cmake/test_add_lib_thread/build/CMakeFiles/app.dir
-/home/lyj/git/other/cmake/test_add_lib_thread/build/CMakeFiles/edit_cache.dir
-/home/lyj/git/other/cmake/test_add_lib_thread/build/CMakeFiles/rebuild_cache.dir
-/home/lyj/git/other/cmake/test_add_lib_thread/build/thread_test/CMakeFiles/thread_test.dir
-/home/lyj/git/other/cmake/test_add_lib_thread/build/thread_test/CMakeFiles/edit_cache.dir
-/home/lyj/git/other/cmake/test_add_lib_thread/build/thread_test/CMakeFiles/rebuild_cache.dir

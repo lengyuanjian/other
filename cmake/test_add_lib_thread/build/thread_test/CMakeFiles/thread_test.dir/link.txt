@@ -1,1 +1,0 @@
-gcc -fPIC -shared -Wl,-soname,libthread_test.so -o libthread_test.so CMakeFiles/thread_test.dir/thread_time.cpp.o  -lstdc++ 

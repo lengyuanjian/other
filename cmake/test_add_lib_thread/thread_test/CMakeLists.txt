@@ -1,4 +1,5 @@
-add_library(thread_test SHARED thread_time.cpp)
+# add_library(thread_test SHARED thread_time.cpp)
+add_library(thread_test STATIC thread_time.cpp)
 
 target_link_libraries(thread_test PRIVATE -lstdc++)
 

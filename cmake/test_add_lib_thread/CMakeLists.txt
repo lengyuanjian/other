@@ -14,7 +14,7 @@ add_executable(app main.cpp)
 
 add_subdirectory(thread_test)
 
-target_link_libraries(app PRIVATE thread_test -lstdc++)
+target_link_libraries(app PRIVATE thread_test)
 
 target_compile_definitions(app PRIVATE MODULE_NAME="app")
 execute_process(
