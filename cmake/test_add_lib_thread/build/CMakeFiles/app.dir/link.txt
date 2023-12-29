@@ -1,0 +1,1 @@
+gcc CMakeFiles/app.dir/main.cpp.o -o app  -Wl,-rpath,/home/lyj/git/other/cmake/test_add_lib_thread/build/thread_test thread_test/libthread_test.so -lstdc++ 
