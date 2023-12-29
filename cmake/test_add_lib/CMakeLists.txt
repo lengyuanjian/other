@@ -10,8 +10,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED NO)
 
 add_executable(app main.cpp)
 
-target_compile_definitions(app PRIVATE MODULE_NAME="app")
+add_subdirectory(lib)
 
+target_link_libraries(app PRIVATE add)
+
+target_compile_definitions(app PRIVATE MODULE_NAME="app")
 execute_process(
     COMMAND date "+%Y-%m-%d %H:%M:%S"
     OUTPUT_VARIABLE CMAKE_DATE
