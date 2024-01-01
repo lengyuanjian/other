@@ -47,3 +47,25 @@
             ${CMAKE_CURRENT_SOURCE_DIR}/another_public_include
     )
 
+    # 为目标添加预处理器定义
+target_compile_definitions(my_target PRIVATE DEBUG=1)
+
+# 为目标设置特定于编译器的选项
+target_compile_options(my_target PRIVATE -Wall -Wextra)
+
+# 为目标指定包含目录
+target_include_directories(my_target PUBLIC include PRIVATE src)
+
+# 指定链接时搜索库的附加目录
+target_link_directories(my_target PRIVATE ${MY_LIBRARY_DIR})
+
+# 为目标设置链接器特定的选项
+target_link_options(my_target PRIVATE -L${MY_LIBRARY_DIR} -lmy_library)
+
+# 为目标指定预编译头文件
+target_precompile_headers(my_target PRIVATE "stdafx.h")
+
+# 将源文件添加到目标
+target_sources(my_target PRIVATE main.cpp foo.cpp bar.cpp)
+
+
